@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 1 - Acceso de JS al DOM</title>
+    <style>
+      .azul {
+        background-color: cyan;
+        color: purple;
+        border: 2px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="titulo">JS Av. Clase 1</h1>
+
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+    </ul>
+
+    <script>
+      const titulo = document.querySelector("h1");
+      titulo.innerHTML = "Ejercicio 1 Manipulacion del DOM";
+      titulo.setAttribute("id", "titulo");
+
+      const items = document.querySelectorAll("li");
+      for (let i = 0; i < items.length; i++) {
+        items[i].innerHTML = "Producto " + (i + 1);
+      }
+
+      const parrafo = document.createElement("p");
+      parrafo.innerHTML = "Soy un texto generado dinamicamente";
+      parrafo.setAttribute("class", "title");
+
+      const listaDesordenada = document.querySelector("ul");
+      document.querySelector("body").insertBefore(parrafo, listaDesordenada);
+    </script>
+  </body>
+</html>

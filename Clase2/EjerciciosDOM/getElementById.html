@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <h1 id="titulo" class="title">Hola mundo!</h1>
+    <button id="btn">Cambiar de color</button>
+    <br />
+    <p>
+      <span>12 de Agosto, </span>
+      <span>Argentina</span>
+    </p>
+    <script>
+      //   const titulo = document.getElementById("titulo");
+      //   console.log("elemento titulo", titulo);
+      //   console.dir(titulo);
+      //   titulo.textContent = "Chau mundo!";
+      //   document.querySelector("h1").textContent = "Chau chau mundo";
+      //   document.querySelector(".title").textContent = "Chau chau chau mundo";
+      //   document.querySelector("#titulo").textContent =
+      //     "Chau chau chau chau mundo";
+      //   const primerSpan = document.querySelector("span");
+      //   console.log("Query selector", primerSpan);
+      //   const todosLosSpan = document.querySelectorAll("span");
+      //   console.log("Query selector all", todosLosSpan);
+      //   console.log(
+      //     "Atributo id del boton: ",
+      //     document.querySelector("#btn").getAttribute("id")
+      //   );
+      //   const span = document.createElement("span");
+      //   span.innerHTML = "Hola, soy un span generado dinamicamente";
+      //   document.getElementsByTagName("p")[0].appendChild(span);
+      let innerHTMLP = document.getElementsByTagName("p")[0].innerHTML;
+      innerHTMLP += "<span>Hola, soy un span generado dinamicamente</span>";
+      document.getElementsByTagName("p")[0].innerHTML = innerHTMLP;
+      document.getElementsByTagName("p")[0].setAttribute('class', "title")
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2- Acceso avanzado de JS al DOM</title>
+</head>
+<body>
+
+    <p>Antes de la ul</p>
+    <ul id="list">
+        <li>CSS</li>
+    </ul>
+    <p>Después de la ul</p>
+
+
+    <script>
+        let list = document.querySelector('#list')
+
+        /* Inyección de contenido HTML */
+        /* list.insertAdjacentHTML('beforebegin','<h2>Tecnología Web</h2>')
+        list.insertAdjacentHTML('afterbegin','<li>HTML</li>')
+        list.insertAdjacentHTML('beforeend','<li>JS</li>')
+        list.insertAdjacentHTML('afterend','<p>Para desarrolladores Frontend</p>') */
+
+        /* Inyección de elementos HTML */
+        const h2 = document.createElement('h2')
+        const li1 = document.createElement('li')
+        const li2 = document.createElement('li')
+        const p = document.createElement('p')
+
+        h2.innerText = '** Tecnología Web **'
+        li1.innerText = 'HTML'
+        li2.innerText = 'JS'
+        p.innerText = '!!! Para desarrolladores Frontend !!!'
+
+        /* list.insertAdjacentElement('beforebegin',h2)
+        list.insertAdjacentElement('afterbegin',li1)
+        list.insertAdjacentElement('beforeend',li2)
+        list.insertAdjacentElement('afterend',p) */
+
+        /* Inyección de contenido de Texto */
+        list.insertAdjacentText('beforebegin','<h2>Tecnología Web</h2>')
+        list.insertAdjacentText('afterbegin','<li>HTML</li>')
+        list.insertAdjacentText('beforeend','<li>JS</li>')
+        list.insertAdjacentText('afterend','<p>Para desarrolladores Frontend</p>')
+
+    </script>
+
+</body>
+</html>

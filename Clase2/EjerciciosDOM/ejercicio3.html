@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 - Acceso performante de JS al DOM</title>
+    <style>
+        h2 {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>
+        Crear una lista desordenada con 10 elementos dentro, utilizando un ciclo for.
+        Tener en cuenta que sólo se puede realizar un único appendChild al ul creado,
+        De esta forma se minimiza el tiempo de actualizaciones en el DOM.
+    </h2>
+
+    <script>
+
+        var ul = document.createElement('ul')
+        document.body.appendChild(ul)
+
+        var fragment = new DocumentFragment()
+
+        for(let i=0; i<10; i++) {
+            var li = document.createElement('li')
+            li.innerText = `Elemento ${i+1}`
+            //ul.appendChild(li) // no cumplo con el enunciado (10 appendChild)
+            fragment.appendChild(li)
+        }
+
+        ul.appendChild(fragment) // cumplo con el enunciado (1 appendChild)
+        
+    </script>
+
+</body>
+</html>

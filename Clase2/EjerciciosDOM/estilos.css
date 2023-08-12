@@ -1,0 +1,9 @@
+.title {
+  font-size: large;
+  font-weight: bold;
+  color: red;
+}
+
+#titulo {
+  border: 2px solid brown;
+}
