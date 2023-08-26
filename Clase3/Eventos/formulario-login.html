@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="http://www.google.com">Ir a google</a>
+    <form action="">
+      <div>
+        <label for="usuario">Nombre de usuario</label>
+        <input id="usuario" type="text" />
+      </div>
+      <div>
+        <label for="clave">Clave</label>
+        <input id="clave" type="password" />
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
+    <script>
+      const form = document.querySelector("form");
+      form.addEventListener("submit", (e) => {
+        // Prevengo que me recarge la pagina
+        e.preventDefault();
+        alert(
+          "Los datos no se pueden cambiar, esta seguro que desea enviar el formulario?"
+        );
+        form.submit();
+      });
+      document.querySelector("a").addEventListener("click", (e) => {
+        // Prevengo que navegue a google
+        e.preventDefault();
+        alert(
+          "Usted esta por salir del sitio, esta seguro de que desea continuar?"
+        );
+      });
+    </script>
+  </body>
+</html>

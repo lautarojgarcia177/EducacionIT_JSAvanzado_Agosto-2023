@@ -14,6 +14,7 @@
       <span>12 de Agosto, </span>
       <span>Argentina</span>
     </p>
+    <div id="app"></div>
     <script>
       //   const titulo = document.getElementById("titulo");
       //   console.log("elemento titulo", titulo);
@@ -34,10 +35,14 @@
       //   const span = document.createElement("span");
       //   span.innerHTML = "Hola, soy un span generado dinamicamente";
       //   document.getElementsByTagName("p")[0].appendChild(span);
-      let innerHTMLP = document.getElementsByTagName("p")[0].innerHTML;
-      innerHTMLP += "<span>Hola, soy un span generado dinamicamente</span>";
-      document.getElementsByTagName("p")[0].innerHTML = innerHTMLP;
-      document.getElementsByTagName("p")[0].setAttribute('class', "title")
+      // let innerHTMLP = document.getElementsByTagName("p")[0].innerHTML;
+      // innerHTMLP += "<span>Hola, soy un span generado dinamicamente</span>";
+      // document.getElementsByTagName("p")[0].innerHTML = innerHTMLP;
+      // document.getElementsByTagName("p")[0].setAttribute('class', "title")
+      const f = document.createDocumentFragment();
+      const names = ["Susana", "Andrea", "Lorena"];
+      names.forEach((n) => (n.innerHTML += `<div>${n}</div>`));
+      document.getElementById("app").appendChild(f);
     </script>
   </body>
 </html>

@@ -2,3 +2,13 @@ Clase 2
 
 Slitherin = 23;
 Griffindor = 19;
+
+Clase 3
+
+Slitherin = 5;
+Hufflepuff = 2;
+Griffindor = 4;
+
+Clase 4
+Slitherin = 4;
+Griffindor = 2

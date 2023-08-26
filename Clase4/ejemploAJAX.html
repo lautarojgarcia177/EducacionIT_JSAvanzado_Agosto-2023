@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Ejemplo AJAX</h2>
+    <p>Cargar el texto de un archivo externo</p>
+    <div id="contenido"></div>
+    <button type="button" onClick="loadDoc()">Cargar contenido</button>
+    <script>
+        function loadDoc() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "ajax_info.txt");
+            xhttp.onload = function() {
+                document.getElementById('contenido').innerHTML = this.responseText;
+            }
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>

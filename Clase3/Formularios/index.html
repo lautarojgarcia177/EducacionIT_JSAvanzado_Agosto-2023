@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios en JS: Eventos y validaciones</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <dialog id="estasSeguroDialog">
+        <form>
+          <p>
+            No se podran cambiar los datos luego, esta seguro de enviar el formulario?
+          </p>
+          <div>
+            <button value="cancel" formmethod="dialog">Cancel</button>
+            <button id="confirmBtn" value="ok">Confirm</button>
+          </div>
+        </form>
+      </dialog>
+
+    <form id="formulario">
+        <input id="passwordInput" name="password" required type="text">
+        <div id="mensaje-de-error"></div>
+        <input id="submitBtn" type="submit">
+    </form>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
