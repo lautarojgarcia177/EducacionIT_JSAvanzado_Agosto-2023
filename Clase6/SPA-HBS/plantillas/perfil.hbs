@@ -1,0 +1,15 @@
+<div class="alert alert-secondary">
+    <h1>Mi Perfil</h1>
+    <hr>
+
+    <div class="media">
+        {{#if foto}}
+        <img width="150" src="{{ foto }}" class="mr-3" alt="mi foto">
+        {{/if}}
+        
+        <div class="media-body">
+            <h5 class="mt-0">Mis datos</h5>
+            <p>Me llamo <b>{{ nombre }} {{ apellido }}</b> y tengo {{ edad }} años.</p>
+        </div>
+    </div>
+</div>

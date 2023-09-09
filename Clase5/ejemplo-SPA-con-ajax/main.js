@@ -6,6 +6,7 @@ function mediator() {
   xhr.open("get", url);
   xhr.addEventListener("load", () => {
     if (xhr.status == 200) {
+      console.log("Respuesta XHR: ", xhr.response);
       app.innerHTML = xhr.response;
     }
   });
