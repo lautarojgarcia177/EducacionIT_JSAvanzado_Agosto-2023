@@ -12,7 +12,6 @@ Ejemplos:
 - Gmail
 
 NO son SPA:
-
 - Wikipedia
 - Google
 

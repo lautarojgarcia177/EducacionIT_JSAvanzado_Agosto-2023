@@ -19,4 +19,7 @@ Hufflepuff = 2;
 Griffindor = 1;
 
 Clase 6
-Slitherin = 4;
+Slitherin = 5;
+Hufflepuff = 0;
+Griffindor = 0;
+Ravenclaw = 1;
