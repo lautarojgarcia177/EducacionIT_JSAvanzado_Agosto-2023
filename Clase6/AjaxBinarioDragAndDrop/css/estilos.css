@@ -1,0 +1,26 @@
+#drop {
+  border: 3px dashed blue;
+  width: 300px;
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+  font-size: 22px;
+  color: red;
+  background-color: lightyellow;
+  margin: 10px 0;
+}
+
+label {
+  display: block;
+  cursor: pointer;
+}
+
+input {
+  display: none;
+}
+
+.dragenter {
+  background-color: rgb(163 245 238) !important;
+  color: black !important;
+  border: thick double #ffc107 !important;
+}

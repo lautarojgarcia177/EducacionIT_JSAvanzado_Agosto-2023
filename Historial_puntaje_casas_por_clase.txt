@@ -17,3 +17,6 @@ Clase 5
 Slitherin = 5;
 Hufflepuff = 2;
 Griffindor = 1;
+
+Clase 6
+Slitherin = 4;
