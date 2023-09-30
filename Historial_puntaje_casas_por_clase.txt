@@ -29,3 +29,9 @@ Slitherin = 3;
 Hufflepuff = 0;
 Griffindor = 1;
 Ravenclaw = 0;
+
+Clase 9
+Slitherin = 2;
+Hufflepuff = 0;
+Griffindor = 0;
+Ravenclaw = 0;
