@@ -18,3 +18,7 @@ Son funciones que se invocan inmediatamente
 - Singleton: Sirve para que solo haya una unica instancia de un objeto, si se crea devuelta, va a devolver el que se creo inicialmente.
 - Modulo: Sirve para separar el codigo, los modulos pueden acceder a lo que se declaro en otros modulos
 - Revelador: Lo mismo que el patron modulo, pero incorpora que cada modulo va a tener control sobre lo que quiere exponer y lo que no quiere exponer.
+
+# Use strict
+
+Es una Directiva del frontend que indica que el codigo sea mas estricto, previene errores.
