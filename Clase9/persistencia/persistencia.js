@@ -1,18 +1,25 @@
-let contador = 0;
+let contadorLocalStorage = 0;
+let contadorSessionStorage = 0;
 
 function inicio() {
-  contador = Number(localStorage.getItem("contador"));
+  contadorLocalStorage = Number(localStorage.getItem("contador"));
+  contadorSessionStorage = Number(sessionStorage.getItem("contador"));
   actualizar();
 }
 
 function onClick() {
-  contador++;
-  localStorage.setItem("contador", contador);
+  contadorLocalStorage++;
+  contadorSessionStorage++;
+  localStorage.setItem("contador", contadorLocalStorage);
+  sessionStorage.setItem("contador", contadorSessionStorage);
   actualizar();
 }
 
-inicio();
-
 function actualizar() {
-  document.querySelector("span").innerHTML = contador;
+  document.querySelector("#contador-localstorage").innerHTML =
+    contadorLocalStorage;
+  document.querySelector("#contador-sessionstorage").innerHTML =
+    contadorSessionStorage;
 }
+
+inicio();
