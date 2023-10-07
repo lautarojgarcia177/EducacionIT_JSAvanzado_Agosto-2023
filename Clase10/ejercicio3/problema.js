@@ -16,24 +16,7 @@ Los nombres de los regalos y los renos siempre serán mayores que 0.
 */
 
 function distributeGifts(packOfGifts, reindeers) {
-  // Calcula el peso de cada regalo utilizando length
-  packOfGifts = packOfGifts.map((gift) => gift.length);
-  // Calcula la capacidad de cada reno utilizando length * 2
-  reindeersCapacity = reindeers.map((reinderr) => reinderr.length * 2);
-  // Definir Contador de regalos entregados
-  let contador = 0;
-  // Definir Índice del reno actual
-  let reindeerIndex = 0;
-  for (const giftWeigth of packOfGifts) {
-    // Si el reno tiene capacidad, asignarle el regalo, sino asignarselo al siguiente reno
-    if (reindeersCapacity[reindeerIndex] >= giftWeigth) {
-      contador++;
-      reindeersCapacity[reindeerIndex] -= giftWeigth;
-    } else {
-      reindeerIndex++;
-    }
-  }
-  return contador;
+// Escribir resolucion aqui
 }
 
 const packOfGifts = ["book", "doll", "ball", "bottle"];
